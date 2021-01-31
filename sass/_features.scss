@@ -2,7 +2,8 @@
   background-color: #f4f5f7;
 
   grid-column: center-start / center-end;
-  padding: 10rem 0;
+  margin: 0 -15rem;
+  padding: 10rem 15rem;
 
   &__header {
     display: grid;
