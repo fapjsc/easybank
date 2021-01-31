@@ -76,6 +76,8 @@ body {
   .header__text {
     font-size: 1.8rem;
     color: #949597; }
+  .header__photo {
+    margin-left: 2rem; }
   .header__intro {
     max-width: 100%;
     position: absolute;
@@ -86,7 +88,7 @@ body {
     position: relative;
     position: absolute;
     top: -20%;
-    left: 50%; }
+    left: 55.5%; }
   .header__btn {
     justify-self: start;
     padding: 1.5rem 4rem; }
