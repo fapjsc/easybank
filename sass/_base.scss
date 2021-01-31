@@ -1,0 +1,54 @@
+// COLOR VARIABLES
+$crl-blue-dark: hsl(233, 26%, 24%);
+$crl-bright: hsl(192, 70%, 51%);
+$crl-green: hsl(136, 65%, 51%);
+
+$crl-blue-light-1: hsl(233, 8%, 62%);
+$crl-blue-light-2: hsl(220, 16%, 96%);
+
+$crl-grey-light-1: hsl(0, 0%, 98%);
+$crl-grey-light-2: hsl(0, 0%, 100%);
+
+// FONT VARIABLES
+$font-primary: 'Public Sans', sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: $crl-grey-light-1;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 8rem auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: 8rm repeat(4, min-content);
+  grid-template-columns:
+    [full-start] minmax(5rem, 1fr)
+    [center-start] repeat(8, [col-start] 14.25rem [col-end]) [center-end]
+    minmax(5rem, 1fr)
+    [full-end];
+
+  & > * {
+    font-size: 3rem;
+    padding: 5rem;
+  }
+}

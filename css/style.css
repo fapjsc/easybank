@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #fafafa; }
+
+.container {
+  max-width: 144rem;
+  margin: 8rem auto;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 8rm repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(8, [col-start] 14.25rem [col-end]) [center-end] minmax(5rem, 1fr) [full-end]; }
+  .container > * {
+    font-size: 3rem;
+    padding: 5rem; }
+
+.nav {
+  background-color: khaki;
+  grid-column: full-start / full-end; }
+
+.header {
+  background-color: grey;
+  grid-column: center-start / full-end; }
+
+.features {
+  background-color: hotpink;
+  grid-column: center-start / center-end; }
+
+.blog {
+  background-color: blue;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: red;
+  grid-column: full-start / full-end; }
