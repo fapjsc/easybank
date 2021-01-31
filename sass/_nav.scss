@@ -1,5 +1,33 @@
 .nav {
-  background-color: khaki;
-
   grid-column: full-start / full-end;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 3rem;
+  background-color: #ffffff;
+  z-index: 99;
+
+  &__logo {
+  }
+
+  &__list {
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $crl-blue-light-1;
+  }
+
+  &__btn {
+  }
 }

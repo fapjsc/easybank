@@ -29,26 +29,45 @@ body {
   font-family: $font-primary;
   font-weight: 300;
   line-height: 1.6;
-  background-color: $crl-grey-light-1;
+  background-color: #f4f5f7;
 }
 
 .container {
   max-width: 144rem;
   margin: 8rem auto;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
   overflow: hidden;
 
   display: grid;
-  grid-template-rows: 8rm repeat(4, min-content);
+  grid-template-rows: 8rem 65.5rem repeat(3, min-content);
   grid-template-columns:
     [full-start] minmax(5rem, 1fr)
-    [center-start] repeat(8, [col-start] 14.25rem [col-end]) [center-end]
+    [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14.25rem) [col-end]
+    )
+    [center-end]
     minmax(5rem, 1fr)
     [full-end];
+}
+.btn {
+  border: none;
+  font-size: 1.3rem;
+  background-image: linear-gradient(to right, $crl-green, $crl-bright);
+  padding: 1.5rem 3rem;
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
 
-  & > * {
-    font-size: 3rem;
-    padding: 5rem;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      rgba($crl-green, 0.8),
+      rgba($crl-bright, 0.8)
+    );
   }
 }

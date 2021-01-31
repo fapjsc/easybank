@@ -1,5 +1,53 @@
 .header {
-  background-color: grey;
+  background-color: #fafafa;
 
-  grid-column: center-start / full-end;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: minmax(min-content, 47rem) minmax(min-content, 75rem);
+
+  position: relative;
+  padding-left: 15rem;
+
+  &__content {
+    align-self: center;
+    margin-top: -3rem;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-row-gap: 3rem;
+  }
+
+  &__title {
+    font-size: 6rem;
+    line-height: 1.1;
+    color: #2c2c46;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    color: #949597;
+  }
+
+  &__photo {
+  }
+
+  &__intro {
+    max-width: 100%;
+    position: absolute;
+    top: -42%;
+  }
+
+  &__mockups {
+    max-width: 100%;
+    z-index: 95;
+    position: relative;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+  }
+
+  &__btn {
+    justify-self: start;
+    padding: 1.5rem 4rem;
+  }
 }
