@@ -2,4 +2,63 @@
   background-color: #2d314e;
 
   grid-column: full-start / full-end;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__icon-box {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    grid-gap: 3rem 1.5rem;
+
+    svg {
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        fill: $crl-green;
+      }
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #fff;
+  }
+
+  &__logo {
+    grid-column: 1 / -1;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 1rem;
+    font-size: 1.4rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $crl-green;
+    }
+  }
+
+  .cta {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-row-gap: 2rem;
+
+    p {
+      font-size: 1.4rem;
+      color: $crl-blue-light-1;
+    }
+  }
 }
