@@ -1,5 +1,5 @@
 .header {
-  background-color: #fafafa;
+  background-color: $crl-grey-light-1;
 
   grid-column: full-start / full-end;
   display: grid;
@@ -17,7 +17,7 @@
   }
 
   &__title {
-    font-size: 6rem;
+    font-size: 5.5rem;
     line-height: 1.1;
     color: #2c2c46;
     font-weight: 400;
@@ -26,6 +26,7 @@
   &__text {
     font-size: 1.8rem;
     color: #949597;
+    font-weight: 400;
   }
 
   &__photo {
@@ -35,7 +36,8 @@
   &__intro {
     max-width: 100%;
     position: absolute;
-    top: -42%;
+    top: -40%;
+    left: 43%;
   }
 
   &__mockups {

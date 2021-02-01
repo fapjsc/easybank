@@ -7,12 +7,9 @@
   background-color: #ffffff;
   z-index: 99;
 
-  &__logo {
-  }
-
   &__list {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     display: flex;
   }
 
@@ -26,8 +23,18 @@
   &__link:visited {
     text-decoration: none;
     color: $crl-blue-light-1;
-  }
+    transition: all 0.2s;
 
-  &__btn {
+    &:hover {
+      border-bottom: 4px solid transparent;
+      border-image: linear-gradient(
+        to right,
+        rgba($crl-green, 1),
+        rgba($crl-bright, 1)
+      ); /* gradient with required colors */
+      border-image-slice: 1;
+      padding-bottom: 2.5rem;
+      color: #0c0d11;
+    }
   }
 }

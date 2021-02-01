@@ -52,7 +52,7 @@ body {
 }
 .btn {
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   background-image: linear-gradient(to right, $crl-green, $crl-bright);
   padding: 1.5rem 3rem;
   border-radius: 100px;
@@ -66,14 +66,14 @@ body {
   &:hover {
     background-image: linear-gradient(
       to right,
-      rgba($crl-green, 0.8),
-      rgba($crl-bright, 0.8)
+      rgba($crl-green, 0.7),
+      rgba($crl-bright, 0.7)
     );
   }
 }
 
 .heading-2 {
-  color: #2c2c46;
+  color: $crl-blue-dark;
   font-size: 4rem;
   font-weight: 400;
 }

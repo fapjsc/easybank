@@ -1,5 +1,5 @@
 .blog {
-  background-color: #fafafa;
+  background-color: $crl-grey-light-1;
 
   grid-column: center-start / center-end;
   margin-left: -15rem;
@@ -10,16 +10,19 @@
     margin-top: 3.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    grid-column-gap: 3rem;
+    grid-gap: 3rem;
     grid-template-rows: 1fr;
   }
 
   &__box {
-    background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.07);
     display: grid;
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.07);
+  }
+
+  &__shape {
+    background-color: #fff;
   }
 
   &__photo {
@@ -34,10 +37,11 @@
 
   &__text {
     margin-top: 0.5rem;
-    padding: 2rem 2.5rem;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+
     h3 {
       color: #3e3f43;
-      font-weight: 300;
+      font-weight: 400;
       font-size: 1.6rem;
       cursor: pointer;
       transition: all 0.2s;
@@ -45,13 +49,14 @@
       margin-top: 1rem;
 
       &:hover {
-        color: #69b99c;
+        color: $crl-green;
       }
     }
 
     p {
       color: #9f9ea3;
       font-size: 1.3rem;
+      font-weight: 400;
       line-height: 1.4;
       margin-top: 1rem;
     }
