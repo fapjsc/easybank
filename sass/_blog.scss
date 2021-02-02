@@ -6,12 +6,23 @@
   margin-right: -15rem;
   padding: 9rem 15rem;
 
+  &__title {
+    @media screen and(max-width: 940px) {
+      text-align: center;
+    }
+  }
+
   &__content {
     margin-top: 3.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 0.2fr));
     grid-gap: 3rem;
     grid-template-rows: 1fr;
+    justify-content: center;
+
+    // @media screen and(max-width: 1193px) {
+    //   justify-content: center;
+    // }
   }
 
   &__box {

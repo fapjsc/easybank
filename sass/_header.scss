@@ -8,6 +8,16 @@
   position: relative;
   padding-left: 15rem;
 
+  @media screen and(max-width:1200px) {
+    padding-left: 5rem;
+  }
+  @media screen and(max-width: 920px) {
+    background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.6)),
+      url(/img/image-mockups.png);
+    background-size: cover;
+    background-position: bottom;
+  }
+
   &__content {
     align-self: center;
     margin-top: -3rem;
@@ -21,16 +31,28 @@
     line-height: 1.1;
     color: #2c2c46;
     font-weight: 400;
+    @media screen and(max-width: 920px) {
+      color: #fff;
+      font-size: 4.5rem;
+    }
   }
 
   &__text {
     font-size: 1.8rem;
     color: #949597;
     font-weight: 400;
+    @media screen and(max-width: 920px) {
+      color: #fff;
+      font-size: 1.5rem;
+    }
   }
 
   &__photo {
     margin-left: 2rem;
+    @media screen and(max-width:699px) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
   }
 
   &__intro {
@@ -38,6 +60,10 @@
     position: absolute;
     top: -40%;
     left: 43%;
+
+    @media screen and(max-width:699px) {
+      top: -20%;
+    }
   }
 
   &__mockups {
@@ -47,6 +73,9 @@
     position: absolute;
     top: -20%;
     left: 55.5%;
+    @media screen and(max-width: 920px) {
+      display: none;
+    }
   }
 
   &__btn {

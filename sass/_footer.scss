@@ -3,9 +3,19 @@
 
   grid-column: full-start / full-end;
   padding: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-items: center;
+  margin-left: -3rem;
+
+  @media screen and(max-width: 820px) {
+    grid-row-gap: 6rem;
+  }
+
+  @media screen and(max-width: 569px) {
+    grid-row-gap: 3rem;
+    margin: 0;
+  }
 
   &__icon-box {
     display: grid;
@@ -20,24 +30,41 @@
         fill: $crl-green;
       }
     }
+    @media screen and(max-width: 569px) {
+      justify-content: center;
+      justify-items: center;
+    }
   }
 
   &__icon {
     height: 2rem;
     width: 2rem;
     fill: #fff;
+    @media screen and(max-width: 569px) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
 
   &__logo {
     grid-column: 1 / -1;
   }
 
+  &__nav {
+  }
+
   &__list {
+    list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4rem;
     grid-row-gap: 1rem;
     font-size: 1.4rem;
+
+    @media screen and(max-width: 569px) {
+      grid-template-columns: max-content;
+      justify-items: center;
+    }
   }
 
   &__link:link,
@@ -59,6 +86,10 @@
     p {
       font-size: 1.4rem;
       color: $crl-blue-light-1;
+    }
+
+    @media screen and(max-width: 820px) {
+      grid-column: 1 / -1;
     }
   }
 }

@@ -32,10 +32,12 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div id="app" class="container">
       <!-- Nav bar -->
       <nav class="nav">
         <img class="nav__logo" src="/img/svg/logo.svg" alt="logo" />
+
+        <input type="checkbox" id="toggle" />
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#">Home</a>
@@ -54,6 +56,26 @@
           </li>
         </ul>
         <button class="btn nav__btn">Request Invite</button>
+
+        <label for="toggle">
+          <img
+            v-if="!toggleShow"
+            class="nav__toggle"
+            src="/img/svg/icon-hamburger.svg"
+            alt="toggle"
+            @click="toggle"
+          />
+        </label>
+
+        <label for="toggle">
+          <img
+            v-if="toggleShow"
+            class="nav__toggle"
+            src="/img/svg/icon-close.svg"
+            alt="toggle"
+            @click="toggle"
+          />
+        </label>
       </nav>
 
       <!-- Header -->
@@ -150,7 +172,7 @@
 
       <!-- Blog -->
       <section class="blog">
-        <h2 class="heading-2">Latest Articles</h2>
+        <h2 class="heading-2 blog__title">Latest Articles</h2>
 
         <div class="blog__content">
           <div class="blog__box">
@@ -252,8 +274,9 @@
             <use xlink:href="img/svg/socal/sprite.svg#icon-instagram"></use>
           </svg>
         </div>
+
         <nav class="footer__nav">
-          <ul class="nav__list footer__list">
+          <ul class="footer__list">
             <li class="">
               <a href="#" class="footer__link">About Us</a>
             </li>
@@ -281,11 +304,14 @@
         </div>
       </footer>
     </div>
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Mike</a>.
-    </div>
+    </div> -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="index.js"></script>
   </body>
 </html>

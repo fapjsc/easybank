@@ -9,6 +9,11 @@
     display: grid;
     grid-template-columns: minmax(min-content, 64rem);
     grid-row-gap: 1rem;
+
+    @media screen and(max-width: 920px) {
+      text-align: center;
+      justify-content: center;
+    }
   }
 
   &__text {
@@ -22,6 +27,14 @@
     grid-template-columns: repeat(auto-fit, minmax(min-content, 26rem));
     grid-column-gap: 3rem;
     align-items: flex-start;
+    justify-content: center;
+
+    @media screen and(max-width: 699px) {
+      grid-template-columns: minmax(min-content, 34rem);
+    }
+    @media screen and(max-width: 939px) {
+      grid-column-gap: 8rem;
+    }
   }
 
   &__box {
@@ -29,6 +42,12 @@
     grid-template-rows: repeat(3, min-context);
     grid-row-gap: 3rem;
     align-items: end;
+
+    @media screen and(max-width: 939px) {
+      justify-items: center;
+      margin-bottom: 8rem;
+      text-align: center;
+    }
   }
 
   &__heading {
